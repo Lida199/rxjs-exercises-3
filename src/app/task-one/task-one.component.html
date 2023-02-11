@@ -1,0 +1,15 @@
+<div class="container">
+  <input type="text" #search id="search" />
+  <div>
+    <div class="wrapper" *ngIf="movies$ | async as movies">
+      <div class="movie" *ngFor="let movie of movies">
+        <img src="{{ movie.image }}" alt="movie poster" />
+        <div>
+          <h2>{{ movie.title }}</h2>
+          <p>{{ movie.year }}</p>
+          <p>{{ movie.actors }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

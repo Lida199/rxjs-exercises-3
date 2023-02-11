@@ -1,0 +1,12 @@
+<h2>Infinite Scroll</h2>
+<div class="container" #container>
+    <ul *ngIf="lists$ | async as lists">
+        <li *ngFor="let list of lists">
+            <img src="{{list.image}}" alt="users">
+            <div>
+                <h3>{{list.title}}</h3>
+                <p>{{list.description}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
